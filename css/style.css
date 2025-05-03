@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+*:not(i):not(.fa) {
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+:root {
+    --mobile-header-height: 80px;
+    --header-width: 250px;
+    --header-padding: 0px 0px 0px 25px;
+    --header-padding-mobile: 20px 25px;
+    --slider-text-margin-top: -90px;
+    --slider-text-font-size: 2rem;
+    --slider-text-padding-left: 12px;
+    --header-logo-width: 42px;
+    --main-background-color: rgba(18, 19, 23, 1);
+}
+
+body {
+    background-color: var(--main-background-color);
+}
+
+header {
+    min-width: var(--header-width);
+    height: 100vh;
+    background-color: #030303;
+    padding: var(--header-padding);
+    position: fixed
+}
+
+main {
+    margin-left: var(--header-width);
+}
+
+.mobile-nav {
+    display: none;
+}
+
+.search-container {
+    background-color: #8D8D8B;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #C0C0BF;
+}
+
+.search-container i {
+    color: #C0C0BF;
+}
+
+.search-container input {
+    margin-left: 10px;
+    background-color: transparent;
+    border-style: none;
+}
+
+.search-container input:focus {
+    outline: none;
+}
+
+
+header img {
+    width: var(--header-logo-width);
+    margin: 30px 0 20px 0;
+}
+
+nav h2 {
+    color: #8A8A8A;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.nav-links li {
+    margin-top: 20px;
+}
+
+.nav-links i,
+a {
+    font-size: 1.1rem;
+}
+
+.nav-links a {
+    margin-left: 10px;
+}
+
+.active-link * {
+    color: #159FFF;
+}
+
+.active-link {
+    border-right: 3px solid #159FFF;
+}
+
+.active-link-mobile * {
+    color: #159FFF;
+}
+
+/* ---Mobile Nav */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    background-color: #030303;
+    overflow-x: hidden;
+    transition: all 0.5s ease 0s;
+}
