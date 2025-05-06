@@ -39,3 +39,35 @@ setInterval(() => {
 
 //---Custom Scrollbar
 //Trending
+const customScrollbarTrending = document.querySelector(
+  "#custom-scrollbar-trending"
+);
+window.scrollLeftTrending = () => {
+  customScrollbarTrending.scrollLeft -= 300;
+};
+
+window.scrollRightTrending = () => {
+  customScrollbarTrending.scrollLeft += 300;
+};
+//Popular
+const customScrollbarPopular = document.querySelector(
+  "#custom-scrollbar-popular"
+);
+window.scrollLeftPopular = () => {
+  customScrollbarPopular.scrollLeft -= 300;
+};
+
+window.scrollRightPopular = () => {
+  customScrollbarPopular.scrollLeft += 300;
+};
+
+//href details
+const infoBoxImage = document.querySelectorAll(".info-box img");
+infoBoxImage.forEach((e) => {
+  e.style.cursor = "pointer";
+  e.addEventListener("click", () => {
+    location.href = "./details.html";
+  });
+});
+
+//Custom Scrollbar---
